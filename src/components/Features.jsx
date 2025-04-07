@@ -61,9 +61,10 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
     <div className="relative size-full">
       <video
         src={src}
-        loop
-        muted
-        autoPlay
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        playsInline={true}  // Important for iOS devices
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-slate-200">
