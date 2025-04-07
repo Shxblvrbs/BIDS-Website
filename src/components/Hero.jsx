@@ -31,11 +31,14 @@ const Hero = () => {
             <div>
                 <video 
                 src={`/videos/background.mp4`}
-                autoPlay
-                loop
-                muted
-                className="absolute left-0 top-0 size-full object-cover object-center opacity-50"
-                />
+                autoPlay={true}
+                loop={true}
+                muted={true}
+                playsInline={true}  // Important for iOS devices
+                className="absolute left-0 top-0 w-full h-full object-cover object-center opacity-50"
+                >
+                Your browser does not support the video tag.
+                </video>
             </div>
             <h1 className="font-black text-4xl text-right font-venus-rising absolute bottom-28 right-5 z-40 text-balance text-bids-red sm:right-10 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                 Redefine
