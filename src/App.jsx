@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <main className='relative min-h-screen w-screen overflow-x-hidden bg-black md:bg-[url(/img/background.png)]'>
+    <main className='relative min-h-screen w-screen overflow-x-hidden bg-black lg:bg-[url(/img/background.png)]'>
       <NavBar />
       <Hero />
       <About />
