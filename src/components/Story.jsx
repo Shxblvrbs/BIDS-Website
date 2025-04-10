@@ -46,7 +46,7 @@ const FloatingImage = () => {
   };
 
   return (
-    <div id="story" className="min-h-dvh -mt-20 w-screen bg-black">
+    <section id="story" className="min-h-dvh -mt-20 w-screen bg-black">
       <div className="flex size-full flex-col items-center py-10 pb-24">
         <p className="font-aller-display font-black text-slate-200 text-lg uppercase md:text-2xl">
            Contact Us
@@ -79,40 +79,46 @@ const FloatingImage = () => {
             </div>
 
             {/* for the rounded corner */}
+            <div className="">
             <svg
-              className="invisible absolute size-0"
+              className="invisible relative size-0"
               xmlns="http://www.w3.org/2000/svg"
-            >
+              >
               <defs>
                 <filter id="flt_tag">
                   <feGaussianBlur
                     in="SourceGraphic"
                     stdDeviation="8"
                     result="blur"
-                  />
+                    />
                   <feColorMatrix
                     in="blur"
                     mode="matrix"
                     values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
                     result="flt_tag"
-                  />
+                    />
                   <feComposite
                     in="SourceGraphic"
                     in2="flt_tag"
                     operator="atop"
-                  />
+                    />
                 </filter>
               </defs>
             </svg>
+          </div>
             
           </div>
-          <div className="-mt-56 flex-center">
-          <Button id="contact-us" title="Contact Us" containerClass="flex-center gap-5 items-center"/>
-          </div>
         </div>
-
+        <div>
+          <a
+          href="/contact"
+          className="about__button flex font-venus-rising px-8 py-3 rounded-full text-white font-semibold bg-bids-red hover:bg-bids-gray transition duration-300"
+          >
+          Contact Us
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ import Button from "./Button";
 
 const navItems = ["Who We Are", "Initiatives", "Contact Us"];
 
-const NavBar = () => {
+const Navbar = () => {
   // State for toggling audio and visual indicator
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
@@ -77,15 +77,9 @@ const NavBar = () => {
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
+              <a href="/about" className="nav-hover-btn">Who We Are</a>
+              <a href="/coming-soon/" className="nav-hover-btn">Initiatives</a>
+              <a href="/" className="nav-hover-btn">Contact Us</a>
             </div>
 
             <button
@@ -117,4 +111,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

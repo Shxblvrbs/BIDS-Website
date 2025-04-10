@@ -28,18 +28,18 @@ const About = () => {
 
   return (
     <div id="about" className="min-h-screen w-screen">
-      <div className="relative mb-8 mt-44 flex flex-col items-center gap-5">
-        <p className="font-aller-display font-black text-slate-200 text-lg uppercase md:text-2xl">
+      <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
+        <p className="font-aller-display font-black text-bids-gray text-lg uppercase md:text-2xl">
           Welcome to Blackstone Integrated Defense Solutions
         </p>
 
         <AnimatedTitle
-          title="Unyielding precision, unmatched capability—"
-          containerClass="mt-2 !text-bids-red text-center w-[1700px]"
+          title="Where strategy meets results"
+          containerClass="mt-2 !text-bids-red text-center"
         />
         <AnimatedTitle
           title="B.I.D.S. delivers the future of defense"
-          containerClass="!text-slate-200 text-center"
+          containerClass="!text-bids-gray text-center"
         />
       </div>
 
@@ -51,6 +51,7 @@ const About = () => {
             className="absolute left-0 top-0 size-full object-cover"
           />
         </div>
+        
       </div>
     </div>
   );

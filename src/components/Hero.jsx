@@ -9,8 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
     useGSAP(() => {
         gsap.set('#video-frame', {
-            clipPath: 'polygon(14% 0, 72% 0, 88% 88%, 0 95%)',
-            borderRadius: "0% 0% 45% 10%",
+            clipPath: 'polygon(0% 0, 100% 0, 100% 50%, 0 100%)',
         });
         gsap.from('#video-frame', {
             clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
@@ -39,6 +38,7 @@ const Hero = () => {
                 >
                 Your browser does not support the video tag.
                 </video>
+                
             </div>
             <h1 className="font-black text-4xl text-right font-venus-rising absolute bottom-28 right-5 z-40 text-balance text-bids-red sm:right-10 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                 Redefine
@@ -51,7 +51,12 @@ const Hero = () => {
                     <p className="mt-2 mb-5 max-w-[800px] font-aller-display font-black text-slate-200 sm:text-4xl md:text-7xl lg:text-6xl">
                         Advancing Global Defense with Innovative Technology and Strategic Alliances
                     </p>
-                    <a href="/coming-soon/"><Button id="hero-button" title="Contact Us" containerClass="flex-center gap-5"/></a>
+                    <a
+                    href="/contact"
+                    className="about__button font-venus-rising inline-block mt-5 px-8 py-3 rounded-full text-white font-semibold bg-bids-red hover:bg-bids-gray transition duration-300"
+                    >
+                    Contact Us
+                    </a>
                 </div>
             </div>
         </div>

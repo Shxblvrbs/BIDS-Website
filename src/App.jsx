@@ -1,22 +1,16 @@
+// src/App.jsx
 import React from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import NavBar from './components/Navbar';
-import Features from './components/Features';
-import Story from './components/Story';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About'; // if you want a separate About Us page
 
 const App = () => {
   return (
-    <main className='relative min-h-screen w-screen overflow-x-hidden bg-black lg:bg-[url(/img/background.png)]'>
-      <NavBar />
-      <Hero />
-      <About />
-      <Features />
-      <Story />
-      <Footer />
-    </main>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
