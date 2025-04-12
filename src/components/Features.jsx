@@ -67,7 +67,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
         playsInline={true}  // Important for iOS devices
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
-      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-slate-200">
+      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-white">
         <div>
           <h1 className="bento-title special-font">{title}</h1>
           {description && (
@@ -159,21 +159,21 @@ const Features = () => (
             src="videos/feature-4.mp4"
             title={
               <>
-                Firearms
+                Drones
               </>
             }
-            description="Precision-engineered firearms built for performance, reliability, and tactical superiority in any mission or environment."
+            description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
             isComingSoon
           />
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1">
           <div className="flex size-full flex-col justify-between bg-bids-red p-5">
-            <h1 className="bento-title special-font max-w-64 text-slate-200">
+            <h1 className="bento-title special-font max-w-64 text-white">
               M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
             </h1>
 
-            <TiLocationArrow className="text-slate-200 m-5 scale-[5] self-end" />
+            <TiLocationArrow className="text-white m-5 scale-[5] self-end" />
           </div>
         </BentoTilt>
       </div>
