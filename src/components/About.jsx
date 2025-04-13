@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <p className="font-aller-display font-black text-bids-gray text-lg uppercase md:text-2xl">
+        <p className="font-aller-display font-black text-slate-200 text-lg uppercase md:text-2xl">
           Welcome to Blackstone Integrated Defense Solutions
         </p>
 
@@ -39,7 +39,7 @@ const About = () => {
         />
         <AnimatedTitle
           title="B.I.D.S. delivers the future of defense"
-          containerClass="!text-bids-gray text-center"
+          containerClass="!text-slate-200 text-center"
         />
       </div>
 
