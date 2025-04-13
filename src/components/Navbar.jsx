@@ -71,12 +71,13 @@ const Navbar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           {/* Logo and Product button */}
           <div className="flex items-center gap-7">
-            <a href="/"><img src="/img/PNG 3 HQ.png" alt="logo" className="w-[500px]" /></a>
+            <a href="/" className="block lg:hidden"><img src="/img/ICON 2.png" alt="logo" className="w-[120px]" /></a>
+            <a href="/" className="hidden lg:block"><img src="/img/PNG 3 HQ.png" alt="logo" className="w-[500px]" /></a>
           </div>
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
+            <div className="">
               <a href="/about" className="nav-hover-btn">Who We Are</a>
               <a href="/coming-soon/" className="nav-hover-btn">Initiatives</a>
               <a href="/" className="nav-hover-btn">Contact Us</a>
