@@ -60,7 +60,7 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-28 right-5 text-balance text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
+        <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-20 lg:bottom-28 right-5 text-balance text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
             Redefine
         </h1>
         <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-5 right-5 text-balance  text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
