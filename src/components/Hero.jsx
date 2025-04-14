@@ -40,15 +40,15 @@ const Hero = () => {
                 </video>
                 
             </div>
-            <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-28 right-5 z-40 text-balance text-bids-red sm:right-10 sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl">
+            <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-20 lg:bottom-28 right-5 z-40 text-balance text-bids-red sm:right-10 sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl">
                 Redefine
             </h1>
             <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-5 right-5 z-40 text-balance text-slate-200 sm:right-10 sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl">
                 Strategy
             </h1>
             <div className="absolute left-0 top-0 z-40 size-full">
-                <div className="mt-44 px-5 sm:px-10">
-                    <p className="mt-2 mb-5 max-w-[800px] font-aller-display font-black text-slate-200 text-4xl md:text-7xl lg:text-6xl">
+                <div className="mt-32 md:mt-44 px-5 sm:px-10">
+                    <p className="mt-2 mb-5 max-w-[800px] font-aller-display font-black text-slate-200 text-4xl md:text-5xl lg:text-6xl">
                         Advancing Global Defense with Innovative Technology and Strategic Alliances
                     </p>
                     <a

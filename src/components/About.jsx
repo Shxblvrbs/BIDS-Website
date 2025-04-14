@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <p className="font-aller-display font-black text-slate-200 text-lg uppercase md:text-2xl">
+        <p className="text-center font-aller-display font-black text-slate-200 text-lg uppercase md:text-2xl">
           Welcome to Blackstone Integrated Defense Solutions
         </p>
 
