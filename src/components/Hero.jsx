@@ -48,7 +48,7 @@ const Hero = () => {
             </h1>
             <div className="absolute left-0 top-0 z-40 size-full">
                 <div className="mt-32 md:mt-44 px-5 sm:px-10">
-                    <p className="mt-2 mb-5 max-w-[800px] font-aller-display font-black text-slate-200 text-4xl md:text-5xl lg:text-6xl">
+                    <p className="mt-2 mb-5 max-w-[800px] font-aller-display font-black text-slate-200 text-3xl md:text-4xl lg:text-6xl">
                         Advancing Global Defense with Innovative Technology and Strategic Alliances
                     </p>
                     <a
