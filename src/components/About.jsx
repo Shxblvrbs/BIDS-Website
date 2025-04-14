@@ -8,23 +8,48 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   useGSAP(() => {
-    const clipAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#clip",
-        start: "center center",
-        end: "+=800 center",
-        scrub: 0.5,
-        pin: true,
-        pinSpacing: true,
+    ScrollTrigger.matchMedia({
+      // Desktop
+      "(min-width: 768px)": function () {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#clip",
+            start: "center center",
+            end: "+=800 center",
+            scrub: 0.5,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+
+        tl.to(".mask-clip-path", {
+          width: "100vw",
+          height: "100vh",
+          borderRadius: 0,
+        });
+      },
+
+      // Mobile
+      "(max-width: 767px)": function () {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#clip",
+            start: "top top",
+            end: "+=600",
+            scrub: 0.5,
+            pin: true,
+            pinSpacing: true,
+          },
+        });
+
+        tl.to(".mask-clip-path", {
+          width: "100vw",
+          height: "100vh",
+          borderRadius: 0,
+        });
       },
     });
-
-    clipAnimation.to(".mask-clip-path", {
-      width: "100vw",
-      height: "100vh",
-      borderRadius: 0,
-    });
-  });
+  }, []);
 
   return (
     <div id="about" className="min-h-screen w-screen">
@@ -43,7 +68,8 @@ const About = () => {
         />
       </div>
 
-      <div className="h-dvh w-screen" id="clip">
+      {/* Animate this section */}
+      <div className="h-[100dvh] w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
             src="/img/BIDS 3D.jpg"
@@ -51,7 +77,6 @@ const About = () => {
             className="absolute left-0 top-0 size-full object-cover"
           />
         </div>
-        
       </div>
     </div>
   );
