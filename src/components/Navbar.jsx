@@ -78,7 +78,7 @@ const Navbar = () => {
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
             <div className="">
-              <a href="/about" className="nav-hover-btn">About Us</a>
+              <a href="/about-us" className="nav-hover-btn">About Us</a>
               <a href="/coming-soon/" className="nav-hover-btn">Initiatives</a>
               <a href="/" className="nav-hover-btn">Contact Us</a>
             </div>
