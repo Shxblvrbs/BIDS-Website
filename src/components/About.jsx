@@ -35,7 +35,7 @@ const About = () => {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: "#clip",
-            start: "top+=200 top", // Offset helps better trigger on iOS/Android
+            start: "top+=125 top", // Offset helps better trigger on iOS/Android
             end: "+=500",
             scrub: 0.5,
             pin: true,
