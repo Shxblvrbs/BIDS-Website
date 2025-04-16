@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <main className='relative min-h-screen w-screen overflow-x-hidden bg-[url(/img/background.png)]'>
+    <main className='relative min-h-screen w-screen overflow-x-hidden bg-black md:bg-[url(/img/background.png)]'>
       <NavBar />
       <Hero />
       <About />

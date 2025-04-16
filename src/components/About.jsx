@@ -1,57 +1,45 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useEffect, useState } from "react";
 
 import AnimatedTitle from "./AnimatedTitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768); // Tailwind's md breakpoint
+    };
+
+    handleResize(); // Run on load
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useGSAP(() => {
-    ScrollTrigger.matchMedia({
-      // Desktop view
-      "(min-width: 768px)": function () {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#clip",
-            start: "center center",
-            end: "+=800",
-            scrub: 0.5,
-            pin: true,
-            pinSpacing: true,
-            // markers: true, // uncomment for debugging
-          },
-        });
+    if (!isDesktop) return;
 
-        tl.to(".mask-clip-path", {
-          width: "100vw",
-          height: "100vh",
-          borderRadius: 0,
-        });
-      },
-
-      // Mobile view
-      "(max-width: 767px)": function () {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#clip",
-            start: "top+=125 top", // Offset helps better trigger on iOS/Android
-            end: "+=500",
-            scrub: 0.5,
-            pin: true,
-            pinSpacing: true,
-            // markers: true, // uncomment for debugging
-          },
-        });
-
-        tl.to(".mask-clip-path", {
-          width: "100vw",
-          height: "100vh",
-          borderRadius: 0,
-        });
+    const clipAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#clip",
+        start: "center center",
+        end: "+=800 center",
+        scrub: 0.5,
+        pin: true,
+        pinSpacing: true,
       },
     });
-  }, []);
+
+    clipAnimation.to(".mask-clip-path", {
+      width: "100vw",
+      height: "100vh",
+      borderRadius: 0,
+    });
+  }, [isDesktop]);
 
   return (
     <div id="about" className="min-h-screen w-screen">
@@ -69,15 +57,27 @@ const About = () => {
           containerClass="!text-slate-200 text-center"
         />
       </div>
-
-      <div className="h-[100dvh] w-screen" id="clip">
-        <div className="mask-clip-path about-image">
+      
+      <div className="mb-40">
+      {isDesktop ? (
+        <div className="h-dvh w-screen" id="clip">
+          <div className="mask-clip-path about-image">
+            <img
+              src="/img/BIDS 3D.jpg"
+              alt="Background"
+              className="absolute left-0 top-0 size-full object-cover"
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="relative h-[60vh] w-full overflow-hidden">
           <img
-            src="/img/BIDS 3D.jpg"
+            src="/img/1.jpg"
             alt="Background"
-            className="absolute left-0 top-0 size-full object-cover"
+            className="about-image absolute left-0 top-0 h-full w-full object-cover"
           />
         </div>
+      )}
       </div>
     </div>
   );
