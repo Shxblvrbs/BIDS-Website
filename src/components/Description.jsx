@@ -38,7 +38,7 @@ const Description = () => {
               Your Business Deserves Better
             </h3>
             <p className='mb-6 font-aller-display'>
-              At B.I.D.S., we are more than a defense firm — we are a catalyst for innovation, connection, and impact. With deep roots in both the public and private sectors, we specialize in aligning emerging technologies with the real-world needs of modern defense, intelligence, and commercial markets. Our team brings together strategists, engineers, and visionaries dedicated to pushing boundaries, forging partnerships, and delivering integrated solutions that redefine what's possible.
+              At B.I.D.S., we are more than a defense firm — we are a catalyst for innovation, connection, and impact. We specialize in aligning emerging technologies with the real-world needs of modern defense and commercial markets. Our team brings together strategists, engineers, and visionaries dedicated to pushing boundaries, forging partnerships, and delivering integrated solutions that redefine what's possible.
             </p>
             {/* stats */}
             <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
