@@ -73,7 +73,7 @@ const About = () => {
           <div className="relative p-4 rounded-lg bg-white/10 backdrop-blur-md">
             <div className="about__glow absolute inset-0 -z-10 bg-bids-red/30 blur-2xl opacity-0 rounded-lg" />
             <img
-              src="/img/BIDS 3D.jpg"
+              src="/img/BIDS-3D.jpg"
               alt="About"
               className="rounded-lg md:max-w-4xl"
             />
