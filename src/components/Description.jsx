@@ -15,7 +15,7 @@ const Description = () => {
   });
   return (
     <section className='section' id='about' ref={ref}>
-      <div className='container mx-auto mb-40'>
+      <div className='container mx-auto mt-32 mb-56'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
           {/* img */}
           <motion.div
@@ -23,7 +23,7 @@ const Description = () => {
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
-            className='flex-1 bg-[url(/img/description.png)] bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
+            className='md:block hidden flex-1 bg-[url(/img/description.png)] bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
           ></motion.div>
           {/* text */}
           <motion.div
@@ -38,16 +38,14 @@ const Description = () => {
               Your Business Deserves Better
             </h3>
             <p className='mb-6 font-aller-display'>
-              We're here to make your business look good online—simple as that. 
-              Whether it's a fresh website, sharp marketing, or some cool designs,  
-              we do the work so you can focus on what you do best. No gimmicks, just 
-              honest work that gets your business noticed.
+              At B.I.D.S., we are more than a defense firm — we are a catalyst for innovation, connection, and impact. With deep roots in both the public and private sectors, we specialize in aligning emerging technologies with the real-world needs of modern defense, intelligence, and commercial markets. Our team brings together strategists, engineers, and visionaries dedicated to pushing boundaries, forging partnerships, and delivering integrated solutions that redefine what's possible.
             </p>
             {/* stats */}
             <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
               <div>
                 <div className='text-[40px] font-aller-display text-gradient mb-2'>
-                  {inView ? <CountUp start={0} end={4} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={30} duration={3} /> : null}
+                  +
                 </div>
                 <div className='font-aller-display text-sm tracking-[2px]'>
                   Years of <br />
@@ -56,7 +54,7 @@ const Description = () => {
               </div>
               <div>
                 <div className='text-[40px] font-aller-display text-gradient mb-2'>
-                  {inView ? <CountUp start={0} end={50} duration={3} /> : null}
+                  {inView ? <CountUp start={0} end={100} duration={3} /> : null}
                   +
                 </div>
                 <div className='font-aller-display text-sm tracking-[2px]'>

@@ -58,7 +58,7 @@ const About = () => {
           Who We Are
         </h1>
 
-        <p className="about__body font-aller-display mt-6 max-w-5xl mx-auto text-slate-200 text-lg md:text-xl opacity-0">
+        <p className="about__body font-aller-display mt-6 max-w-5xl mx-auto text-slate-200 text-md md:text-md opacity-0">
           At Blackstone Integrated Defense Solutions, our mission is to drive the future of global security by fostering strategic partnerships and bridging the gap between innovative technologies and the organizations that shape tomorrow’s defense landscape. With a diverse range of capabilities spanning defense, technology, and commercial industries, we are committed to connecting visionary solutions with high-level stakeholders, creating limitless opportunities for collaboration and growth.        
         </p>
 
@@ -75,7 +75,7 @@ const About = () => {
             <img
               src="/img/BIDS 3D.jpg"
               alt="About"
-              className="rounded-lg max-w-4xl"
+              className="rounded-lg md:max-w-4xl"
             />
           </div>
         </div>
