@@ -40,10 +40,10 @@ const Hero = () => {
                 </video>
                 
             </div>
-            <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-20 lg:bottom-28 right-5 z-40 text-balance text-bids-red sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="font-black text-3xl text-right font-venus-rising absolute bottom-14 md:bottom-20 xl:bottom-28 right-5 z-40 text-balance text-bids-red sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
                 Redefine
             </h1>
-            <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-5 right-5 z-40 text-balance text-slate-200 sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="font-black text-3xl text-right font-venus-rising absolute bottom-5 right-5 z-40 text-balance text-slate-200 sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
                 Strategy
             </h1>
             <div className="absolute left-0 top-0 z-40 size-full">
@@ -60,10 +60,10 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-20 lg:bottom-28 right-5 text-balance text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
+        <h1 className="font-black text-3xl text-right font-venus-rising absolute bottom-14 md:bottom-20 xl:bottom-28 right-5 text-balance text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
             Redefine
         </h1>
-        <h1 className="font-black text-5xl text-right font-venus-rising absolute bottom-5 right-5 text-balance  text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
+        <h1 className="font-black text-3xl text-right font-venus-rising absolute bottom-5 right-5 text-balance  text-bids-gray sm:right-10 md:text-6xl lg:text-7xl xl:text-8xl">
             Strategy
         </h1>
     </div>
