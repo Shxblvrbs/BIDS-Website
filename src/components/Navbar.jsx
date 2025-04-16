@@ -71,7 +71,7 @@ const Navbar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           {/* Logo and Product button */}
           <div className="flex items-center gap-7">
-            <a href="/" className="block lg:hidden"><img src="/img/ICON 2.png" alt="logo" className="w-[70px] md:w-[120px]" /></a>
+            <a href="/" className="block lg:hidden"><img src="/img/ICON 2.png" alt="logo" className="w-[80px] md:w-[120px]" /></a>
             <a href="/" className="hidden lg:block"><img src="/img/PNG 3 HQ.png" alt="logo" className="w-[500px]" /></a>
           </div>
 
