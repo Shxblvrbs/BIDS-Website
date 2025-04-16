@@ -76,6 +76,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
         </div>
 
         {isComingSoon && (
+          <a href="/coming-soon">
           <div
             ref={hoverButtonRef}
             onMouseMove={handleMouseMove}
@@ -94,6 +95,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
             <TiLocationArrow className="relative z-20" />
             <p className="relative z-20">coming soon</p>
           </div>
+          </a>
         )}
       </div>
     </div>
@@ -102,7 +104,9 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
 const Features = () => (
   <section className="bg-black pb-52">
-    <div className="container mx-auto px-3 md:px-10">
+
+    {/* Desktop Version */}
+    <div className="hidden md:block container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         <AnimatedTitle 
         title="Active"
@@ -155,6 +159,84 @@ const Features = () => (
         </BentoTilt>
 
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
+          <BentoCard
+            src="videos/feature-4.mp4"
+            title={
+              <>
+                Drones
+              </>
+            }
+            description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
+            isComingSoon
+          />
+        </BentoTilt>
+
+        <BentoTilt className="bento-tilt_1">
+          <div className="flex size-full flex-col justify-between bg-bids-red p-5">
+            <h1 className="bento-title special-font max-w-64 text-white">
+              M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
+            </h1>
+
+            <TiLocationArrow className="text-white m-5 scale-[5] self-end" />
+          </div>
+        </BentoTilt>
+      </div>
+    </div>
+
+    {/* Mobile Version */}
+    <div className="md:hidden block container mx-auto px-3 md:px-10">
+      <div className="px-5 py-32">
+        <AnimatedTitle 
+        title="Active"
+        containerClass="!text-bids-red text-center"
+        />
+        <AnimatedTitle 
+        title="Projects"
+        containerClass="!text-slate-200 text-center"
+        />
+      </div>
+
+      <BentoTilt className="bento-tilt_1 border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
+        <BentoCard
+          src="videos/feature-1.mp4"
+          title={
+            <>
+              Next Generation Procurement Platform!
+            </>
+          }
+          description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
+          isComingSoon
+        />
+      </BentoTilt>
+
+      <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
+        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+          <BentoCard
+            src="videos/feature-2.mp4"
+            title={
+              <>
+                Voice Stress Analysis
+              </>
+            }
+            description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
+            isComingSoon
+          />
+        </BentoTilt>
+
+        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+          <BentoCard
+            src="videos/feature-3.mp4"
+            title={
+              <>
+                Defense
+              </>
+            }
+            description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
+            isComingSoon
+          />
+        </BentoTilt>
+
+        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-4.mp4"
             title={
