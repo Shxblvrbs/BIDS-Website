@@ -201,7 +201,7 @@ const Features = () => (
           src="videos/feature-1.mp4"
           title={
             <>
-              Next Generation Procurement Platform!
+              Next Generation Procurement Platform
             </>
           }
           description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
