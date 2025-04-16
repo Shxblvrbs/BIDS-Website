@@ -150,7 +150,7 @@ body{
     }
   
     .bento-title {
-      @apply uppercase md:text-6xl text-4xl font-black font-venus-rising;
+      @apply uppercase md:text-6xl text-3xl font-black font-venus-rising;
     }
   
     .story-img-container {
