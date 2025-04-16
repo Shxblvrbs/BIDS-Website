@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ title, containerClass }) => {
+const AnimatedTitleSmall = ({ title, containerClass }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
       {title.split("<br />").map((line, index) => (
         <div
           key={index}
-          className="text-4xl flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
+          className="text-2xl md:text-4xl flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
         >
           {line.split(" ").map((word, idx) => (
             <span
@@ -54,4 +54,4 @@ const AnimatedTitle = ({ title, containerClass }) => {
   );
 };
 
-export default AnimatedTitle;
+export default AnimatedTitleSmall;

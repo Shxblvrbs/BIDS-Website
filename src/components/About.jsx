@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useState } from "react";
 
-import AnimatedTitle from "./AnimatedTitle";
+import AnimatedTitleSmall from "./AnimatedTitleSmall";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,11 +48,11 @@ const About = () => {
           Welcome to Blackstone Integrated Defense Solutions
         </p>
 
-        <AnimatedTitle
+        <AnimatedTitleSmall
           title="Where strategy meets results"
           containerClass="mt-2 !text-bids-red text-center"
         />
-        <AnimatedTitle
+        <AnimatedTitleSmall
           title="B.I.D.S. delivers the future of defense"
           containerClass="!text-slate-200 text-center"
         />
