@@ -58,7 +58,7 @@ const About = () => {
         />
       </div>
       
-      <div className="mb-40">
+      <div className="mb-40 md:mb-0">
       {isDesktop ? (
         <div className="h-dvh w-screen" id="clip">
           <div className="mask-clip-path about-image">
