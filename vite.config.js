@@ -8,7 +8,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        comingSoon: path.resolve(__dirname, 'public/coming-soon/index.html'),
       }
     }
   }
