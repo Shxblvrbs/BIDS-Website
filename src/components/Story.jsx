@@ -46,7 +46,7 @@ const FloatingImage = () => {
   };
 
   return (
-    <section id="story" className="min-h-dvh -mt-XX w-screen bg-black">
+    <section id="story" className="min-h-dvh mt-32 md:mt-0 w-screen bg-black">
       <div className="flex size-full flex-col items-center py-10 pb-24">
         <p className="font-aller-display font-black text-slate-200 text-lg uppercase md:text-2xl">
            Contact Us
