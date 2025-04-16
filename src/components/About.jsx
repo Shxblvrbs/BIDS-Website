@@ -72,7 +72,7 @@ const About = () => {
       ) : (
         <div className="relative h-[60vh] w-full overflow-hidden">
           <img
-            src="/img/1.jpg"
+            src="/img/2.jpg"
             alt="Background"
             className="about-image absolute left-0 top-0 h-full w-full object-cover"
           />
