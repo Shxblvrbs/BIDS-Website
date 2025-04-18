@@ -33,7 +33,7 @@ const Hero = () => {
       >
         {/* 🔸 Fallback Image */}
         <img
-          src="/img/BIDS-3D.jpg"
+          src="/img/HeroFallback.png"
           alt="Fallback Background"
           className={`absolute left-0 top-0 h-full w-full object-cover object-center transition-opacity duration-500 ${
             videoLoaded ? "opacity-0" : "opacity-50"

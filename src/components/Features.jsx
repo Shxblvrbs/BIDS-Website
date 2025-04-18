@@ -39,9 +39,10 @@ export const BentoTilt = ({ children, className = "" }) => {
   );
 };
 
-export const BentoCard = ({ src, title, description, isComingSoon }) => {
+export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoverOpacity, setHoverOpacity] = useState(0);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const hoverButtonRef = useRef(null);
 
   const handleMouseMove = (event) => {
@@ -59,14 +60,26 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
   return (
     <div className="relative size-full">
+      {!videoLoaded && (
+        <img
+          src={fallBackSrc}
+          alt="Feature fallback"
+          className="absolute left-0 top-0 size-full object-cover object-center z-0"
+        />
+      )}
+
       <video
         src={src}
         autoPlay={true}
         loop={true}
         muted={true}
-        playsInline={true}  // Important for iOS devices
-        className="absolute left-0 top-0 size-full object-cover object-center"
+        playsInline={true}
+        onLoadedData={() => setVideoLoaded(true)}
+        className={`absolute left-0 top-0 size-full object-cover object-center ${
+          videoLoaded ? "opacity-100" : "opacity-0"
+        } transition-opacity duration-500`}
       />
+
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-white">
         <div>
           <h1 className="bento-title special-font">{title}</h1>
@@ -77,24 +90,23 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
         {isComingSoon && (
           <a href="/coming-soon">
-          <div
-            ref={hoverButtonRef}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-bids-gray px-5 py-2 text-xs uppercase text-white/20"
-          >
-            {/* Radial gradient hover effect */}
             <div
-              className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
-              style={{
-                opacity: hoverOpacity,
-                background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #e0000058, #00000026)`,
-              }}
-            />
-            <TiLocationArrow className="relative z-20" />
-            <p className="relative z-20">coming soon</p>
-          </div>
+              ref={hoverButtonRef}
+              onMouseMove={handleMouseMove}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-bids-gray px-5 py-2 text-xs uppercase text-white/20"
+            >
+              <div
+                className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+                style={{
+                  opacity: hoverOpacity,
+                  background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #e0000058, #00000026)`,
+                }}
+              />
+              <TiLocationArrow className="relative z-20" />
+              <p className="relative z-20">coming soon</p>
+            </div>
           </a>
         )}
       </div>
@@ -104,7 +116,6 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
 const Features = () => (
   <section className="bg-black pb-52">
-
     {/* Desktop Version */}
     <div className="hidden md:block container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
@@ -121,11 +132,8 @@ const Features = () => (
       <BentoTilt className="bento-tilt_1 border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
           src="videos/feature-1.mp4"
-          title={
-            <>
-              Next Generation Procurement Platform
-            </>
-          }
+          fallBackSrc="/img/HeroFallback.png"
+          title={<>Next Generation Procurement Platform</>}
           description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
           isComingSoon
         />
@@ -135,11 +143,8 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-2.mp4"
-            title={
-              <>
-                Voice Stress Analysis
-              </>
-            }
+            fallBackSrc="/img/HeroFallback.png"
+            title={<>Voice Stress Analysis</>}
             description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
             isComingSoon
           />
@@ -148,11 +153,8 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
             src="videos/feature-3.mp4"
-            title={
-              <>
-                Defense
-              </>
-            }
+            fallBackSrc="/img/HeroFallback.png"
+            title={<>Defense</>}
             description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
             isComingSoon
           />
@@ -161,11 +163,8 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
             src="videos/feature-4.mp4"
-            title={
-              <>
-                Drones
-              </>
-            }
+            fallBackSrc="/img/HeroFallback.png"
+            title={<>AgriTech</>}
             description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
             isComingSoon
           />
@@ -199,11 +198,7 @@ const Features = () => (
       <BentoTilt className="bento-tilt_1 border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
           src="videos/feature-1.mp4"
-          title={
-            <>
-              Next Generation Procurement Platform
-            </>
-          }
+          title={<>Next Generation Procurement Platform</>}
           description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
           isComingSoon
         />
@@ -213,11 +208,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-2.mp4"
-            title={
-              <>
-                Voice Stress Analysis
-              </>
-            }
+            title={<>Voice Stress Analysis</>}
             description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
             isComingSoon
           />
@@ -226,11 +217,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-3.mp4"
-            title={
-              <>
-                Defense
-              </>
-            }
+            title={<>Defense</>}
             description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
             isComingSoon
           />
@@ -239,11 +226,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-4.mp4"
-            title={
-              <>
-                Drones
-              </>
-            }
+            title={<>Drones</>}
             description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
             isComingSoon
           />
