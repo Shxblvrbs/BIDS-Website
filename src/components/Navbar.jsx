@@ -80,7 +80,7 @@ const Navbar = () => {
             <div className="">
               <a href="/about-us" className="nav-hover-btn">About Us</a>
               <a href="/coming-soon/" className="nav-hover-btn">Initiatives</a>
-              <a href="/" className="nav-hover-btn">Contact Us</a>
+              <a href="https://forms.office.com/r/MF1Y4FXCxT" className="nav-hover-btn">Contact Us</a>
             </div>
 
             <button
