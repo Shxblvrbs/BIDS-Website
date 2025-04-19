@@ -132,7 +132,7 @@ const Features = () => (
       <BentoTilt className="bento-tilt_1 border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
           src="videos/feature-1.mp4"
-          fallBackSrc="/img/HeroFallback.png"
+          fallBackSrc="/img/feature1fallback.png"
           title={<>Next Generation Procurement Platform</>}
           description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
           isComingSoon
@@ -143,7 +143,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
             src="videos/feature-2.mp4"
-            fallBackSrc="/img/HeroFallback.png"
+            fallBackSrc="/img/feature2fallback.png"
             title={<>Voice Stress Analysis</>}
             description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
             isComingSoon
@@ -153,7 +153,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
             src="videos/feature-3.mp4"
-            fallBackSrc="/img/HeroFallback.png"
+            fallBackSrc="/img/feature3fallback.png"
             title={<>Defense</>}
             description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
             isComingSoon
@@ -163,7 +163,7 @@ const Features = () => (
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
             src="videos/feature-4.mp4"
-            fallBackSrc="/img/HeroFallback.png"
+            fallBackSrc="/img/feature4fallback.png"
             title={<>AgriTech</>}
             description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
             isComingSoon
