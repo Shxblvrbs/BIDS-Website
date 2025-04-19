@@ -39,7 +39,7 @@ export const BentoTilt = ({ children, className = "" }) => {
   );
 };
 
-export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon }) => {
+export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon, isFinished }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoverOpacity, setHoverOpacity] = useState(0);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -109,6 +109,29 @@ export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon }
             </div>
           </a>
         )}
+
+        {isFinished && (
+          <a href="/voice-stress-analyzer">
+            <div
+            ref={hoverButtonRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-bids-gray px-5 py-2 text-xs uppercase text-white"
+            >
+            <div
+            className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+            style={{
+              opacity: hoverOpacity,
+              background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #e0000058, #00000026)`,
+            }}
+            />
+            <TiLocationArrow className="relative z-20" />
+            <p className="relative z-20">learn more</p>
+            </div>
+          </a>
+        )}
+
       </div>
     </div>
   );
@@ -144,9 +167,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-2.mp4"
             fallBackSrc="/img/feature2fallback.png"
-            title={<>Voice Stress Analysis</>}
+            title={<>Voice Stress Analyzer</>}
             description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
-            isComingSoon
+            isFinished
           />
         </BentoTilt>
 
