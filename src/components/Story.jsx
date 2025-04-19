@@ -112,6 +112,8 @@ const FloatingImage = () => {
         <div>
           <a
           href="https://forms.office.com/r/MF1Y4FXCxT"
+          target="_blank" 
+          rel="noopener noreferrer"
           className="about__button flex font-venus-rising px-8 py-3 rounded-full text-white font-semibold bg-bids-red hover:bg-bids-gray transition duration-300"
           >
           Contact Us
