@@ -1,59 +1,34 @@
-import clsx from "clsx";
+import React, { useEffect, useRef, useState } from "react";
+import { IoMenu, IoClose } from "react-icons/io5";
 import gsap from "gsap";
 import { useWindowScroll } from "react-use";
-import { useEffect, useRef, useState } from "react";
-import { TiLocationArrow } from "react-icons/ti";
-
-import Button from "./Button";
-
-const navItems = ["Who We Are", "Initiatives", "Contact Us"];
 
 const Navbar = () => {
-  // State for toggling audio and visual indicator
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
-
-  // Refs for audio and navigation container
-  const audioElementRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navContainerRef = useRef(null);
+  const sideMenuRef = useRef(null);
+  const overlayRef = useRef(null);
 
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Toggle audio and visual indicator
-  const toggleAudioIndicator = () => {
-    setIsAudioPlaying((prev) => !prev);
-    setIsIndicatorActive((prev) => !prev);
-  };
-
-  // Manage audio playback
-  useEffect(() => {
-    if (isAudioPlaying) {
-      audioElementRef.current.play();
-    } else {
-      audioElementRef.current.pause();
-    }
-  }, [isAudioPlaying]);
-
+  // Show/hide navbar on scroll
   useEffect(() => {
     if (currentScrollY === 0) {
-      // Topmost position: show navbar without floating-nav
       setIsNavVisible(true);
       navContainerRef.current.classList.remove("floating-nav");
     } else if (currentScrollY > lastScrollY) {
-      // Scrolling down: hide navbar and apply floating-nav
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
-    } else if (currentScrollY < lastScrollY) {
-      // Scrolling up: show navbar with floating-nav
+    } else if (currentScrollY < lastScrollY){
       setIsNavVisible(true);
       navContainerRef.current.classList.add("floating-nav");
     }
-
     setLastScrollY(currentScrollY);
   }, [currentScrollY, lastScrollY]);
 
+  // Navbar slide animation
   useEffect(() => {
     gsap.to(navContainerRef.current, {
       y: isNavVisible ? 0 : -100,
@@ -62,53 +37,150 @@ const Navbar = () => {
     });
   }, [isNavVisible]);
 
-  return (
-    <div
-      ref={navContainerRef}
-      className="fixed inset-x-0 top-6 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
-    >
-      <header className="absolute top-1/2 w-full -translate-y-1/2">
-        <nav className="flex size-full items-center justify-between p-4">
-          {/* Logo and Product button */}
-          <div className="flex items-center gap-7">
-            <a href="/" className="block lg:hidden"><img src="/img/ICON 2.png" alt="logo" className="w-[80px] md:w-[120px]" /></a>
-            <a href="/" className="hidden lg:block"><img src="/img/PNG 3 HQ.png" alt="logo" className="w-[500px]" /></a>
-          </div>
+  // Mobile menu & overlay animations
+  useEffect(() => {
+    if (!sideMenuRef.current || !overlayRef.current) return;
 
-          {/* Navigation Links and Audio Button */}
-          <div className="flex h-full items-center">
-            <div className="">
-              <a href="/about-us" className="nav-hover-btn">About Us</a>
-              <a href="/coming-soon/" className="nav-hover-btn">Initiatives</a>
-              <a href="https://forms.office.com/r/MF1Y4FXCxT" target="_blank" rel="noopener noreferrer" className="nav-hover-btn">Contact Us</a>
+    if (isMenuOpen) {
+      gsap.to(sideMenuRef.current, {
+        x: "0%",
+        duration: 0.3,
+        ease: "power3.out",
+      });
+      gsap.to(overlayRef.current, {
+        autoAlpha: 1,
+        pointerEvents: "auto",
+        duration: 0.3,
+      });
+    } else {
+      gsap.to(sideMenuRef.current, {
+        x: "100%",
+        duration: 0.3,
+        ease: "power3.in",
+      });
+      gsap.to(overlayRef.current, {
+        autoAlpha: 0,
+        pointerEvents: "none",
+        duration: 0.3,
+      });
+    }
+  }, [isMenuOpen]);
+
+  return (
+    <>
+      {/* Overlay */}
+      <div
+        ref={overlayRef}
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 pointer-events-none opacity-0"
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* Side-menu */}
+      <aside
+        ref={sideMenuRef}
+        className="md:hidden fixed inset-y-0 right-0 text-right w-64 bg-bids-gray z-50 transform -translate-x-full"
+      >
+        <nav className="text-bids-red font-venus-rising h-full flex flex-col justify-center p-6 space-y-6">
+          <a
+            href="/"
+            className="text-lg font-medium"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href="/about-us"
+            className="text-lg font-medium"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About Us
+          </a>
+          <a
+            href="/solutions"
+            className="text-lg font-medium"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Solutions
+          </a>
+          <a
+            href="/coming-soon/"
+            className="text-lg font-medium"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Products & Services
+          </a>
+          <a
+            href="https://forms.office.com/r/MF1Y4FXCxT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg font-medium"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact Us
+          </a>
+        </nav>
+      </aside>
+
+      {/* Main Navbar */}
+      <div
+        ref={navContainerRef}
+        className="fixed inset-x-0 top-6 z-50 h-16 border-none sm:inset-x-6 transition-all duration-700"
+      >
+        <header className="absolute top-1/2 w-full -translate-y-1/2">
+          <nav className="flex w-full items-center justify-between p-4">
+            {/* Logo */}
+            <div className="flex items-center gap-7">
+              <a href="/" className="block lg:hidden">
+                <img
+                  src="/img/ICON 2.png"
+                  alt="logo"
+                  className="w-[80px] md:w-[120px]"
+                />
+              </a>
+              <a href="/" className="hidden lg:block">
+                <img
+                  src="/img/PNG 3 HQ.png"
+                  alt="logo"
+                  className="w-[500px]"
+                />
+              </a>
             </div>
 
+            {/* Desktop links */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <a href="/" className="nav-hover-btn">
+                Home
+              </a>
+              <a href="/about-us" className="nav-hover-btn">
+                About Us
+              </a>
+              <a href="/solutions" className="nav-hover-btn">
+                Solutions
+              </a>
+              <a href="/coming-soon/" className="nav-hover-btn">
+                Products & Services
+              </a>
+              <a
+                href="https://forms.office.com/r/MF1Y4FXCxT"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-hover-btn"
+              >
+                Contact Us
+              </a>
+            </div>
+
+            {/* Mobile hamburger */}
             <button
-              onClick={toggleAudioIndicator}
-              className="ml-10 items-center space-x-0.5 hidden"
+              className="md:hidden text-bids-red focus:outline-none"
+              onClick={() => setIsMenuOpen((open) => !open)}
             >
-              <audio
-                ref={audioElementRef}
-                className="hidden"
-                src="/audio/loop.mp3"
-                loop
-              />
-              {[1, 2, 3, 4].map((bar) => (
-                <div
-                  key={bar}
-                  className={clsx("indicator-line", {
-                    active: isIndicatorActive,
-                  })}
-                  style={{
-                    animationDelay: `${bar * 0.1}s`,
-                  }}
-                />
-              ))}
+              {isMenuOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
             </button>
-          </div>
-        </nav>
-      </header>
-    </div>
+          </nav>
+        </header>
+      </div>
+    </>
   );
 };
 

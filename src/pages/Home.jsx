@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import NavBar from '../components/Navbar';
 import Features from '../components/Features';
-import Story from '../components/Story';
+import VSAStory from '../components/VSAStory';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
       <Hero />
       <About />
       <Features />
-      <Story />
+      <VSAStory />
       <Footer />
     </main>
   );
