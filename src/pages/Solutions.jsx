@@ -67,7 +67,7 @@ useGSAP(() => {
             <img
               src="/img/IBDBig.png"
               alt="Feature"
-              className="h-auto w-full object-cover"
+              className="h-auto w-full object-cover md:block hidden"
             />
           </FadeIn>
 
@@ -132,7 +132,7 @@ useGSAP(() => {
             <img
             src="/img/JVMABig.png"
             alt="Feature"
-            className="h-auto w-full object-cover"
+            className="h-auto w-full object-cover md:block hidden"
             />
             </FadeIn>
 
@@ -173,7 +173,7 @@ useGSAP(() => {
             <img
               src="/img/PostConflictBig.png"
               alt="Feature"
-              className="h-auto w-full object-cover"
+              className="h-auto w-full object-cover md:block hidden"
             />
           </FadeIn>
 
