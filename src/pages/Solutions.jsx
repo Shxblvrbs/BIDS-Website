@@ -87,7 +87,7 @@ useGSAP(() => {
             <img
               src="/img/IBDSmall.png"
               alt="Feature Detail"
-              className="mx-auto -mt-10 w-full md:-mt-20"
+              className="mx-auto -mt-10 w-96 md:w-full md:-mt-20"
             />
 
             <div className="flex justify-between p-10 pt-4">
@@ -144,7 +144,7 @@ useGSAP(() => {
                 <img
                 src="/img/JVMASmall.png"
                 alt="Feature Detail"
-                className="mx-auto -mt-10 w-full md:-mt-20"
+                className="mx-auto -mt-10 w-96 md:w-full md:-mt-20"
                 />
 
                 <div className="flex justify-between p-10 pt-4">
@@ -193,7 +193,7 @@ useGSAP(() => {
             <img
               src="/img/PostConflictSmall.png"
               alt="Feature Detail"
-              className="mx-auto -mt-10 w-full md:-mt-20"
+              className="mx-auto -mt-10 w-96 md:w-full md:-mt-20"
             />
 
             <div className="flex justify-between p-10 pt-4">
