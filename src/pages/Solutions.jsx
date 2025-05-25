@@ -72,14 +72,12 @@ useGSAP(() => {
           </FadeIn>
 
           {/* Text block */}
-          <a href="/international-business-development-and-capture-management">
           <FadeIn className="translate-y-16 space-y-6 self-start bg-bids-red p-10 opacity-0 lg:col-start-3 lg:row-start-1">
             <h2 className="font-venus-rising text-slate-200 text-xl leading-tight font-semibold md:text-xl">
               International Business Development & Capture Management
             </h2>
             {/* <div className="max-w-lg font-aller-display text-base text-slate-200">Test</div> */}
           </FadeIn>
-          </a>
 
           {/* Static “feature” panel */}
           <FadeIn
@@ -115,7 +113,6 @@ useGSAP(() => {
       >
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3 lg:grid-rows-[auto,auto]">
             {/* Text block now on the left */}
-            <a href="/joint-ventures-mergers-and-acquisitions">
             <FadeIn
             className="translate-y-16 space-y-6 self-start bg-bids-red p-10 opacity-0 lg:col-start-1 lg:row-start-1"
             vars={{ duration: 1 }}
@@ -125,7 +122,6 @@ useGSAP(() => {
                 Joint Ventures, Mergers &amp; Acquisitions
                 </h2>
             </FadeIn>
-            </a>
 
             {/* Main image now on the right */}
             <FadeIn
@@ -182,14 +178,12 @@ useGSAP(() => {
           </FadeIn>
 
           {/* Text block */}
-          <a href="/post-conflict-reconstruction">
           <FadeIn className="translate-y-16 space-y-6 self-start bg-bids-red p-10 opacity-0 lg:col-start-3 lg:row-start-1">
             <h2 className="font-venus-rising text-slate-200 text-xl leading-tight font-semibold md:text-xl">
                Post-Conflict Reconstruction
             </h2>
             {/* <div className="max-w-lg font-aller-display text-base text-slate-200">Test</div> */}
           </FadeIn>
-          </a>
 
           {/* Static “feature” panel */}
           <FadeIn
