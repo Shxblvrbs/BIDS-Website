@@ -15,6 +15,7 @@ import IBD from './pages/IBD';
 import JVMA from './pages/JVMA';
 import PostConflict from './pages/PostConflict';
 import Solutions from './pages/Solutions';
+import ProductsAndServices from './pages/ProductsAndServices';
 
 const App = () => {
   return (
@@ -35,11 +36,11 @@ const App = () => {
       <Route path="/training" element={<ComingSoon />} />
 
       {/* directional pages */}
-      <Route path="/products-and-services" element={<ComingSoon />} />
+      <Route path="/products-and-services" element={<ProductsAndServices />} />
       <Route path="/defense" element={<ComingSoon />} />
-      <Route path="/defense/land" element={<ComingSoon />} />
-      <Route path="/defense/sea" element={<ComingSoon />} />
-      <Route path="/defense/air" element={<ComingSoon />} />
+      <Route path="/products-and-services/land" element={<ComingSoon />} />
+      <Route path="/products-and-services/sea" element={<ComingSoon />} />
+      <Route path="/products-and-services/air" element={<ComingSoon />} />
 
       <Route path="/solutions" element={<Solutions />} />
       <Route path="/international-business-development-and-capture-management" element={<IBD />} />

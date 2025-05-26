@@ -103,7 +103,7 @@ const Navbar = () => {
             Solutions
           </a>
           <a
-            href="/coming-soon/"
+            href="/products-and-services"
             className="text-lg font-medium"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -157,7 +157,7 @@ const Navbar = () => {
               <a href="/solutions" className="nav-hover-btn">
                 Solutions
               </a>
-              <a href="/coming-soon/" className="nav-hover-btn">
+              <a href="/products-and-services" className="nav-hover-btn">
                 Products & Services
               </a>
               <a
