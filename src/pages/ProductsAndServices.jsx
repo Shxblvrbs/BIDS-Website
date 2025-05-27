@@ -74,7 +74,7 @@ const ProductsAndServices = () => {
                   textAnchor="middle"
                   fontFamily="venus-rising, sans-serif"
                   fontWeight="100"
-                  fontSize="22"
+                  fontSize="20"
                   fill="black"
                 >
                   LAND
@@ -103,7 +103,7 @@ const ProductsAndServices = () => {
               textAnchor="middle"
               fontFamily="venus-rising, sans-serif"
               fontWeight="100"
-              fontSize="22"
+              fontSize="20"
               fill="none"
               stroke="#E00000"
               strokeWidth="0.6"
@@ -153,7 +153,7 @@ const ProductsAndServices = () => {
                   textAnchor="middle"
                   fontFamily="venus-rising, sans-serif"
                   fontWeight="100"
-                  fontSize="22"
+                  fontSize="20"
                   fill="black"
                 >
                   SEA
@@ -182,7 +182,7 @@ const ProductsAndServices = () => {
               textAnchor="middle"
               fontFamily="venus-rising, sans-serif"
               fontWeight="100"
-              fontSize="22"
+              fontSize="20"
               fill="none"
               stroke="#E00000"
               strokeWidth="0.6"
@@ -232,7 +232,7 @@ const ProductsAndServices = () => {
                   textAnchor="middle"
                   fontFamily="venus-rising, sans-serif"
                   fontWeight="100"
-                  fontSize="22"
+                  fontSize="20"
                   fill="black"
                 >
                   AIR
@@ -261,7 +261,7 @@ const ProductsAndServices = () => {
               textAnchor="middle"
               fontFamily="venus-rising, sans-serif"
               fontWeight="100"
-              fontSize="22"
+              fontSize="20"
               fill="none"
               stroke="#E00000"
               strokeWidth="0.6"
