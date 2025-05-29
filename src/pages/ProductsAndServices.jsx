@@ -45,7 +45,7 @@ const ProductsAndServices = () => {
       {/* ----------------------- LAND ----------------------------*/}
       <Bounded className="overflow-hidden bg-black py-6 text-white md:py-10">
         <a href="/products-and-services/land" className="block">
-          <div className="relative h-[60vh] w-full mt-6 overflow-hidden rounded group border-l-2 border-r-2 border-bids-red hover:cursor-pointer">
+          <div className="bg-bids-gray relative h-[60vh] w-full mt-6 overflow-hidden rounded group border-l-2 border-r-2 border-bids-red hover:cursor-pointer">
             {/* Fallback image */}
             <img
               src="/img/land-fallback.png"
@@ -129,7 +129,7 @@ const ProductsAndServices = () => {
       {/* ------------------- SEA ---------------------- */}
       <Bounded className="overflow-hidden bg-black py-6 text-white md:py-10">
         <a href="/products-and-services/sea" className="block">
-          <div className="relative h-[60vh] w-full mt-6 overflow-hidden rounded group border-l-2 border-r-2 border-bids-red hover:cursor-pointer">
+          <div className="bg-bids-gray relative h-[60vh] w-full mt-6 overflow-hidden rounded group border-l-2 border-r-2 border-bids-red hover:cursor-pointer">
             {/* Fallback image */}
             <img
               src="/img/sea-fallback.png"
@@ -213,7 +213,7 @@ const ProductsAndServices = () => {
       {/* ---------------------- AIR ----------------------- */}
       <Bounded className="overflow-hidden bg-black py-6 text-white md:py-10">
         <a href="/products-and-services/air" className="block">
-          <div className="relative h-[60vh] w-full mt-6 overflow-hidden rounded group border-l-2 border-r-2 border-bids-red hover:cursor-pointer">
+          <div className="bg-bids-gray relative h-[60vh] w-full mt-6 overflow-hidden rounded group border-l-2 border-r-2 border-bids-red hover:cursor-pointer">
             {/* Fallback image */}
             <img
               src="/img/air-fallback.png"
