@@ -21,7 +21,7 @@ const Navbar = () => {
     } else if (currentScrollY > lastScrollY) {
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
-    } else if (currentScrollY < lastScrollY){
+    } else if (currentScrollY < lastScrollY) {
       setIsNavVisible(true);
       navContainerRef.current.classList.add("floating-nav");
     }
@@ -78,7 +78,7 @@ const Navbar = () => {
       {/* Side-menu */}
       <aside
         ref={sideMenuRef}
-        className="md:hidden fixed inset-y-0 right-0 text-right w-64 bg-bids-gray z-50 transform -translate-x-full"
+        className="md:hidden fixed inset-y-0 right-0 text-right w-64 bg-bids-gray z-50 transform translate-x-full"
       >
         <nav className="text-bids-red font-venus-rising h-full flex flex-col justify-center p-6 space-y-6">
           <a

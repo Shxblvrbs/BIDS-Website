@@ -39,7 +39,7 @@ export const BentoTilt = ({ children, className = "" }) => {
   );
 };
 
-export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon, isFinished }) => {
+export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon, isPS, isSolutions, isAboutUs, isContactUs }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [hoverOpacity, setHoverOpacity] = useState(0);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -110,8 +110,74 @@ export const BentoCard = ({ src, fallBackSrc, title, description, isComingSoon, 
           </a>
         )}
 
-        {isFinished && (
-          <a href="/voice-stress-analyzer">
+        {isPS && (
+          <a href="/products-and-services">
+            <div
+            ref={hoverButtonRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-bids-gray px-5 py-2 text-xs uppercase text-white"
+            >
+            <div
+            className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+            style={{
+              opacity: hoverOpacity,
+              background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #e0000058, #00000026)`,
+            }}
+            />
+            <TiLocationArrow className="relative z-20" />
+            <p className="relative z-20">learn more</p>
+            </div>
+          </a>
+        )}
+
+        {isSolutions && (
+          <a href="/solutions">
+            <div
+            ref={hoverButtonRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-bids-gray px-5 py-2 text-xs uppercase text-white"
+            >
+            <div
+            className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+            style={{
+              opacity: hoverOpacity,
+              background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #e0000058, #00000026)`,
+            }}
+            />
+            <TiLocationArrow className="relative z-20" />
+            <p className="relative z-20">learn more</p>
+            </div>
+          </a>
+        )}
+
+        {isAboutUs && (
+          <a href="/about-us">
+            <div
+            ref={hoverButtonRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-bids-gray px-5 py-2 text-xs uppercase text-white"
+            >
+            <div
+            className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+            style={{
+              opacity: hoverOpacity,
+              background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #e0000058, #00000026)`,
+            }}
+            />
+            <TiLocationArrow className="relative z-20" />
+            <p className="relative z-20">learn more</p>
+            </div>
+          </a>
+        )}
+
+        {isContactUs && (
+          <a href="https://forms.office.com/r/MF1Y4FXCxT">
             <div
             ref={hoverButtonRef}
             onMouseMove={handleMouseMove}
@@ -143,11 +209,11 @@ const Features = () => (
     <div className="hidden md:block container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         <AnimatedTitle 
-        title="Active"
+        title="Quick"
         containerClass="!text-bids-red text-center"
         />
         <AnimatedTitle 
-        title="Projects"
+        title="Links"
         containerClass="!text-slate-200 text-center"
         />
       </div>
@@ -156,9 +222,9 @@ const Features = () => (
         <BentoCard
           src="videos/feature-1.mp4"
           fallBackSrc="/img/feature1fallback.png"
-          title={<>Next Generation Procurement Platform</>}
+          title={<>Products & Services</>}
           description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
-          isComingSoon
+          isPS
         />
       </BentoTilt>
 
@@ -167,9 +233,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-2.mp4"
             fallBackSrc="/img/feature2fallback.png"
-            title={<>Voice Stress Analyzer</>}
+            title={<>Solutions</>}
             description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
-            isFinished
+            isSolutions
           />
         </BentoTilt>
 
@@ -177,9 +243,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-3.mp4"
             fallBackSrc="/img/feature3fallback.png"
-            title={<>Defense</>}
+            title={<>About Us</>}
             description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
-            isComingSoon
+            isAboutUs
           />
         </BentoTilt>
 
@@ -187,9 +253,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-4.mp4"
             fallBackSrc="/img/feature4fallback.png"
-            title={<>AgriTech</>}
+            title={<>Contact Us</>}
             description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
-            isComingSoon
+            isContactUs
           />
         </BentoTilt>
 
@@ -209,11 +275,11 @@ const Features = () => (
     <div className="md:hidden block container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         <AnimatedTitle 
-        title="Active"
+        title="Quick"
         containerClass="!text-bids-red text-center"
         />
         <AnimatedTitle 
-        title="Projects"
+        title="Links"
         containerClass="!text-slate-200 text-center"
         />
       </div>
@@ -222,9 +288,9 @@ const Features = () => (
         <BentoCard
           src="videos/feature-1.mp4"
           fallBackSrc="/img/feature1fallback.png"
-          title={<>Next Generation Procurement Platform</>}
+          title={<>Products & Services</>}
           description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
-          isComingSoon
+          isPS
         />
       </BentoTilt>
 
@@ -233,9 +299,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-2.mp4"
             fallBackSrc="/img/feature2fallback.png"
-            title={<>Voice Stress Analysis</>}
+            title={<>Solutions</>}
             description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
-            isFinished
+            isSolutions
           />
         </BentoTilt>
 
@@ -243,9 +309,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-3.mp4"
             fallBackSrc="/img/feature3fallback.png"
-            title={<>Defense</>}
+            title={<>About Us</>}
             description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
-            isComingSoon
+            isAboutUs
           />
         </BentoTilt>
 
@@ -253,9 +319,9 @@ const Features = () => (
           <BentoCard
             src="videos/feature-4.mp4"
             fallBackSrc="/img/feature4fallback.png"
-            title={<>Drones</>}
+            title={<>Contact Us</>}
             description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
-            isComingSoon
+            isContactUs
           />
         </BentoTilt>
 
