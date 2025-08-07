@@ -23,11 +23,11 @@ const Footer = () => {
             <p>11166 Fairfax Blvd, Ste 500</p>
             <p>Fairfax, VA 22030</p>
           </div>
-          <div>
+          {/* <div>
             <p className="font-bold">State of Qatar Office</p>
             <p>7C9X+MHW Al Hadaf/Thawab</p>
             <p>Doha, Qatar</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Social + Contact Info */}

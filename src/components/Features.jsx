@@ -223,7 +223,7 @@ const Features = () => (
           src="videos/feature-1.mp4"
           fallBackSrc="/img/feature1fallback.png"
           title={<>Products & Services</>}
-          description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
+          description="Discover our end-to-end defense portfolio across land, sea, and air—combining strategic planning, cutting-edge technology integration, and 24/7 mission support tailored to your objectives."
           isPS
         />
       </BentoTilt>
@@ -234,7 +234,7 @@ const Features = () => (
             src="videos/feature-2.mp4"
             fallBackSrc="/img/feature2fallback.png"
             title={<>Solutions</>}
-            description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
+            description="Built in collaboration with industry experts, our bespoke solutions harness advanced analytics, secure communications, and real-time field intelligence to deliver operational superiority in any environment."
             isSolutions
           />
         </BentoTilt>
@@ -244,7 +244,7 @@ const Features = () => (
             src="videos/feature-3.mp4"
             fallBackSrc="/img/feature3fallback.png"
             title={<>About Us</>}
-            description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
+            description="At B.I.D.S., we blend over two decades of defense industry leadership with relentless innovation—delivering integrated systems that set the standard for reliability, precision, and performance."
             isAboutUs
           />
         </BentoTilt>
@@ -253,8 +253,8 @@ const Features = () => (
           <BentoCard
             src="videos/feature-4.mp4"
             fallBackSrc="/img/feature4fallback.png"
-            title={<>Contact Us</>}
-            description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
+            title={<>Contact</>}
+            description="Whether you need a turnkey system or custom consultation, our team is ready to guide you every step of the way—reach out now to start your mission-critical partnership."
             isContactUs
           />
         </BentoTilt>
@@ -289,7 +289,7 @@ const Features = () => (
           src="videos/feature-1.mp4"
           fallBackSrc="/img/feature1fallback.png"
           title={<>Products & Services</>}
-          description="Revolutionizing procurement with AI-driven efficiency, real-time insights, and seamless supplier collaboration—welcome to the future of smarter, faster, and more strategic sourcing."
+          description="Discover our end-to-end defense portfolio across land, sea, and air—combining strategic planning, cutting-edge technology integration, and 24/7 mission support tailored to your objectives."
           isPS
         />
       </BentoTilt>
@@ -300,7 +300,7 @@ const Features = () => (
             src="videos/feature-2.mp4"
             fallBackSrc="/img/feature2fallback.png"
             title={<>Solutions</>}
-            description="Uncover hidden emotions and detect stress in real time with our cutting-edge voice stress analysis system, enhancing security, truth verification, and human insight"
+            description="Built in collaboration with industry experts, our bespoke solutions harness advanced analytics, secure communications, and real-time field intelligence to deliver operational superiority in any environment."
             isSolutions
           />
         </BentoTilt>
@@ -310,7 +310,7 @@ const Features = () => (
             src="videos/feature-3.mp4"
             fallBackSrc="/img/feature3fallback.png"
             title={<>About Us</>}
-            description="Delivering cutting-edge defense solutions with precision, reliability, and innovation to support mission success and national security."
+            description="At B.I.D.S., we blend over two decades of defense industry leadership with relentless innovation—delivering integrated systems that set the standard for reliability, precision, and performance."
             isAboutUs
           />
         </BentoTilt>
@@ -320,7 +320,7 @@ const Features = () => (
             src="videos/feature-4.mp4"
             fallBackSrc="/img/feature4fallback.png"
             title={<>Contact Us</>}
-            description="Multi-purpose drone solutions engineered for adaptability, efficiency, and seamless operation across a wide range of applications and environments."
+            description="Whether you need a turnkey system or custom consultation, our team is ready to guide you every step of the way—reach out now to start your mission-critical partnership."
             isContactUs
           />
         </BentoTilt>
