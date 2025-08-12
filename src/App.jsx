@@ -26,12 +26,12 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/coming-soon" element={<ComingSoon />} />
-      <Route path="/voice-stress-analyzer" element={<VoiceStressAnalysis />} />
+      {/* <Route path="/voice-stress-analyzer" element={<VoiceStressAnalysis />} /> */}
 
       {/* informational pages */}
       <Route path="/products-and-services/land/tactical-vehicles" element={<TacticalVehicles />} />
       <Route path="/products-and-services/land/expeditionary-systems" element={<ExpeditionarySystems />} />
-      <Route path="/products-and-services/land/weapon-systems" element={<WeaponSystems />} />
+      {/* <Route path="/products-and-services/land/weapon-systems" element={<WeaponSystems />} /> */}
       <Route path="/products-and-services/land/cbrn-and-eod-bomb-detection" element={<CBRN />} />
       <Route path="/products-and-services/sea/maritime-domain-awareness" element={<MDA />} />
       <Route path="/products-and-services/air/unmanned-systems" element={<UnmannedSystems />} />
